@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#ifdef ONLINE_JUDGE
+#ifndef ONLINE_JUDGE
 #define LOG(x, t) printf(#x ": " t, x)
 #else
 #define LOG(x, t) ((void)0)
