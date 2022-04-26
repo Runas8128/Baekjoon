@@ -1,0 +1,5 @@
+# auto-generated vscode files
+.vscode/
+
+# C build file
+*/build
