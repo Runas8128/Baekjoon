@@ -14,6 +14,7 @@ int main()
     freopen("./io/output.txt", "w", stdout);
 #endif
 
+    /* WRITE YOUR CODE HERE */
     char* str = "Hello, world!";
     LOG(str, "%s");
 
