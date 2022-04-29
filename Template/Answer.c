@@ -4,7 +4,7 @@
 #ifndef ONLINE_JUDGE
     #define LOG(x, t) printf(#x ": " t, x)
 #else
-    #define LOG(x, t) ((void)0)
+    #define LOG(x, t)
 #endif
 
 int main()
