@@ -2,10 +2,10 @@
 .vscode/
 
 # C build file
-*/build/
+build
 
 # judging io file
-*/io/
+io
 
 # venv
 venv/
