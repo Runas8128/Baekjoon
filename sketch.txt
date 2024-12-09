@@ -1,23 +1,2 @@
-H, W
-R, C, D
-A (HxW)
-B (HxW)
-
-board = { 0, };
-dir = D;
-count = 0;
-
-while true
-
-if !(0<=r<w | 0<=c<h) | board[r, c] == 1 { print(count); return; }
-flag = board[r, c]++;
-if (!flag) D += A[r, c];
-else D += B[r, c];
-D %= 4;
-
-if (D === 0) c++;
-elif (D === 1) r++;
-elif (D === 2) c--;
-else r--;
-
-count++;
+n <- n-1 <- n-3
+n <- n-2
