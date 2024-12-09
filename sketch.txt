@@ -1,2 +1,9 @@
-n <- n-1 <- n-3
-n <- n-2
+[in] t: int
+for t times:
+  [in] m: int n: int k: int
+  [in] pos: [int, int][k]
+
+  section = []
+  some magic
+
+  [out] len(section)
