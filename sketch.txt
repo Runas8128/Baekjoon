@@ -1,9 +1,0 @@
-in n
-
-let s: SLL[int], d
-for n times: in d; s.push(d)
-
-0번 인덱스에서 start end라고 지정한 뒤
-종류 세보고
-종류가 1개거나 2개면 end++
-3개면 최대길이 업데이트하고 start++
