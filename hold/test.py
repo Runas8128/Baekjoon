@@ -1,6 +1,6 @@
 def logic(meetings, log=False):
     meetings.sort(key=lambda d: d[0])
-    meetings.sort(key=lambda d: d[1] - d[0])
+    meetings.sort(key=lambda d: d[1])
     if log: print('meetings:', meetings)
     rooms = [[meetings[0]]]
     for schedule in meetings[1:]:
@@ -29,6 +29,7 @@ def test(prompt, show_all=False):
     test_count = 0
     getting = False
     meetings = []
+    AC = True
 
     for line in prompt:
         words = line.split()
@@ -46,10 +47,13 @@ def test(prompt, show_all=False):
                 calculated = logic(meetings)
                 if show_all or correct != calculated:
                     print(f"testcase #{test_count}: {'OK' if correct == calculated else 'Wrong'}")
+                if correct != calculated:
                     print(f"correct: {correct} / calculated: {calculated}")
-                    logic(meetings, not show_all)
+                    logic(meetings, True)
+                    AC = False
         else:
             meetings.append(value)
+    return AC
 
 with open('./question.txt', 'r', encoding='UTF-8') as f:
-    test(f.readlines())
+    if test(f.readlines()): print('Success')
